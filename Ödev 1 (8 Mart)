@@ -1,0 +1,51 @@
+#SORU 1- Python'da Veri Tiplerini araştırınız, her bir veri tipi için kendi cümlelerinizle açıklamalar yazınız.
+
+
+Integer: Ondalıksız  tam sayılardır. 
+Örn: x = 50, y = 80, z = 5 
+
+Float(double): Ondalıklı, virgüllü sayılardır. 
+Örn: x = 25.5 , y =  30.1 , z = 40.0
+
+String: Sözel ifadeler, sayısal değer almayan karakter kümeleri String olarak adlandırılır. String olarak sayısal değerler de tutulabilir ancak bu ifadeler matematiksel işlemler için kullanılamazlar.
+örn: "Ahmet", "Ankara", password:"123456789"
+
+Bool: True(1), False(0) değerli ifadelerdir.
+örn:  parolaDogrumu = False, parolaDogrumu = True
+
+Diğer veri tipleri:
+Liste veri tipleri: List [] ve tuple , range ()
+Sözlük Veri tipleri: dictionaries
+
+
+
+#Soru2- Kodlama.io sitesinde değişken olarak kullanıldığını düşündüğünüz verileri, veri tipleriyle birlikte örneklendiriniz.
+
+url = "https://www.kodlama.io/"
+Yazılar string ifadeler, 
+Arama kutuları key, value değerlerine sahip string kutuları
+Sağ üstteki barlar classlar
+
+
+#Soru3- Kodlama.io sitesinde şart blokları kullanıldığını düşündüğünüz kısımları örneklendiriniz ve Python dilinde bu örnekleri koda dökünüz.
+Sitenin aynısı olmasa da kendi yaptığım giriş :
+import json
+{email = örnek@gmail.com
+password = 12312131231231}
+
+url =https://sso.teachable.com/secure/499959/identity/login
+kullanıcıadigir = input("email giriniz")
+sifregir = int(input("sifre gir"))
+
+if kullaniciadigir & sifregir == "password"
+    print("Basariyla giris yapıldı")  ##bu kısmı kendim ekledim. Diğer kullanımı continue veya break ile yapılablir.
+else:
+  print("Your email or password is incorrect.")
+
+
+
+
+
+
+
+
