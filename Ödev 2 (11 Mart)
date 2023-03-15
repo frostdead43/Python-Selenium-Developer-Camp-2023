@@ -1,0 +1,53 @@
+ÖDEV TANIMI:
+
+Bir öğrenci kayıt sistemi yazdığımızı düşünelim. Sistemimizdeki öğrencileri bir listede sadece ad soyad olacak şekilde tutalım.
+
+Bu öğrenci kayıt sistemine;
+
+Aldığı isim soy isim ile listeye öğrenci ekleyen
+Aldığı isim soy isim ile eşleşen değeri listeden kaldıran
+Listeye birden fazla öğrenci eklemeyi mümkün kılan
+Listedeki tüm öğrencileri tek tek ekrana yazdıran
+Öğrencinin listedeki index numarası öğrenci numarası olarak kabul edildiğini düşünerek öğrencinin numarasını öğrenmeyi mümkün kılan
+Listeden birden fazla öğrenci silmeyi mümkün kılan (döngü kullanınız)
+fonksiyonları geliştiriniz ve her bir fonksiyonu en az bir kere çağırarak konsolda test ediniz.
+
+Ödevde kullanacağınız döngülerin bir tanesi for bir tanesi while döngüsü olması istenmektedir.
+
+
+
+ögrenciler = ["Emenuel Emenike","İsmail Cipe", "Anderson Talisca", "Mustafa Akbaş"]
+
+def ögrenciEkle(names):
+    ögrenciler.append(names)
+
+def ögrenciSil(names):
+    # ögrenciler.pop() sonöğrenci kaydını siler
+    ögrenciler.remove(names)
+
+def birdenfazlaögrenciekle(names):
+    for i in names:
+        ögrenciler.extend(names)
+
+def listedeögrenciler(names):
+    for i in names:
+        print(ögrenciler)
+
+
+
+def ögrencileriSil(names):
+    i = 0
+    while i < len(names):
+        ögrenciler.remove(names[i])
+        i+= 1
+
+
+
+ögrenciEkle("Baki Mercimek")
+ögrenciSil ("Anderson Talisca")
+birdenfazlaögrenciekle(["Enner Goat Valencia","Felipe Melo"])
+print(ögrenciler)
+ögrencileriSil(["Emenuel Emenike","İsmail Cipe"])
+
+
+Soru 4 BOŞ!
