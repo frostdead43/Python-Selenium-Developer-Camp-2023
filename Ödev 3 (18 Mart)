@@ -1,0 +1,125 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+import time
+
+class Test_Sauce:
+    def loginSauce(self):
+        driver = webdriver.Chrome()
+        url = "https://www.saucedemo.com/"
+        driver.get(url)
+        driver.maximize_window()
+        time.sleep(2)
+        
+
+      ###  Soru 1 ####
+    def Test1(self):
+        driver = webdriver.Chrome()
+        url = "https://www.saucedemo.com/"
+        driver.get(url)
+        driver.maximize_window()
+        time.sleep(2)
+        passwordInput = driver.find_element(By.ID,"password")
+        passwordInput.send_keys("12321321")
+        time.sleep(1)
+        loginbtn = driver.find_element(By.ID,"login-button")
+        time.sleep(1)
+        loginbtn.click()
+        time.sleep(2)
+        UnameError= driver.find_element(By.XPATH,"//*[@id='login_button_container']/div/form/div[3]/h3")
+        testResult = UnameError.text == "Epic sadface: Username is required"
+        print(f"Test Sonucu : {testResult}")
+        if testResult == True:
+            print("Epic sadface: Username is required")
+        
+    #### Soru 2 ####
+    def Test2():
+        driver = webdriver.Chrome()
+        url = "https://www.saucedemo.com/"
+        driver.get(url)
+        driver.maximize_window()
+        time.sleep(2)
+        usernameInput = driver.find_element(By.ID,"user-name")
+        usernameInput.send_keys("asdsadsadas")
+        passwordInput = driver.find_element(By.ID,"password")
+        time.sleep(1)
+        loginbtn = driver.find_element(By.ID,"login-button")
+        time.sleep(1)
+        loginbtn.click()
+        time.sleep(2)
+        PasswordError = driver.find_element(By.XPATH,"//*[@id='login_button_container']/div/form/div[3]/h3")
+        testResult = passwordInput.text == "Epic sadface: Password is required"
+        print(f"Test Sonucu : {testResult}")
+        if testResult == True:
+            print("Epic sadface: Password is required")
+        
+    #### Soru 3 ####
+    def Test3():
+        driver = webdriver.Chrome()
+        url = "https://www.saucedemo.com/"
+        driver.get(url)
+        driver.maximize_window()
+        time.sleep(2)
+        usernameInput = driver.find_element(By.ID,"user-name")
+        usernameInput.send_keys("locked_out_user")
+        passwordInput = driver.find_element(By.ID,"password")
+        passwordInput.send_keys("secret_sauce")
+        time.sleep(4)
+        loginbtn = driver.find_element(By.ID,"login-button")
+        loginbtn.click()
+        time.sleep(2)
+        lockedError = driver.find_element (By.XPATH, "//*[@id='login_button_container']/div/form/div[3]")
+        testResult = lockedError == "Epic sadface: Sorry, this user has been locked out."
+        print(f"Test Sonucu : {testResult}")
+        if testResult == False:
+            print("Epic sadface: Sorry, this user has been locked out.")
+    
+    #### Soru 4 ####
+    def Test4():
+        driver = webdriver.Chrome()
+        url = "https://www.saucedemo.com/"
+        driver.get(url)
+        driver.maximize_window()
+        time.sleep(2)
+        usernameInput = driver.find_element(By.ID,"user-name")
+        passwordInput = driver.find_element(By.ID,"password")
+        time.sleep(1)
+        loginbtn = driver.find_element(By.ID,"login-button")
+        loginbtn.click()
+        time.sleep(2)
+        clickX = driver.find_element(By.XPATH,"//*[@id='login_button_container']/div/form/div[3]/h3/button")
+        clickX.click()
+        time.sleep(2)
+
+    ### Soru 5 ####    
+    def Test5():
+        driver = webdriver.Chrome()
+        url = "https://www.saucedemo.com/"
+        driver.get(url)
+        driver.maximize_window()
+        time.sleep(2)
+        usernameInput = driver.find_element(By.ID,"user-name")
+        usernameInput.send_keys("standard_user")
+        passwordInput = driver.find_element(By.ID,"password")
+        passwordInput.send_keys("secret_sauce")
+        time.sleep(2)
+        loginbtn = driver.find_element(By.ID,"login-button")
+        loginbtn.click()
+        time.sleep(2)
+
+
+
+
+
+
+   
+             
+
+
+testClass = Test_Sauce()
+testClass.loginSauce()
+testClass.Test1()
+testClass.Test2()
+testClass.Test3()
+testClass.Test4()
+testClass.Test5()
